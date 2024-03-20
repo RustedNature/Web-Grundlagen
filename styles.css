@@ -1,4 +1,3 @@
-
 /*
     haha ich bin ein kommentar
 */
@@ -17,45 +16,56 @@
 
     higher overwrites lower
 */
-body{
-    background-color: yellowgreen;
+body {
+  background-color: rgb(51, 51, 51);
+  color: white;
+  text-shadow: 3px 3px 3px #000;
+  margin: 0;
+  padding: 0;
+  font-size: 1.3rem;
+}
+a {
+  margin-left: 2%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-style: italic;
+  text-rendering: optimizeSpeed;
+  text-decoration: underline;
 }
 
-h1,h2,h3,h4,h5,h6{
-    font-style: italic;
-    text-rendering: optimizeSpeed;
+main {
+  margin-left: 15px;
+  margin-right: 20px;
 }
 
-main{
-    margin-left: 15px;
-    margin-right: 20px;
+/* li.pig-pink {
+  background-color: pink;
 }
 
-
-.header{
-    background-color: chocolate;
+li.big-space {
 }
 
-li.pig-pink{
-    background-color: pink;
+#frog-green {
+  background-color: olive;
+  font-size: 2em;
+  text-shadow: 2px 2px 2px #ff0800;
+}
+li.itlaic {
+  font-style: italic;
+} */
+
+h1#main-title {
+  font-style: normal;
+  font-size: 3em;
+  text-transform: uppercase;
+  text-decoration: none;
 }
 
-li.big-space{
-    margin: 5cm;
-
-}
-
-#frog-green{
-    background-color: olive;
-    font-size: 2em;
-    text-shadow: 2px 2px 2px #ff0800;
-}
-li.itlaic{
-    font-style: italic;
-}
-
-h1#main-title{
-    font-style: normal;
-    font-size: 3em;
-    text-transform: uppercase;
+p {
+  margin-left: 10px;
 }
