@@ -4,15 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTML-Tag 2</title>
+    <!--Styles im head-->
+    <!-- <style>
+      body {
+        background-color: #ffee0063;
+        font-size: large;
+        border-color: aqua;
+      }
+    </style> -->
+    <!--Externes CSS-->
+    <link rel="stylesheet" href="styles.css" />
   </head>
+  <nav>
+    <a href="index.html">zurück</a>
+  </nav>
+  <!-- inline styles <body style="background-color: green">-->
   <body>
     <main>
       <article>
-        <h1>Lirum larum löffelstiel wer viel frisst der ________ auch viel</h1>
+        <h1 class="header" id="main-title">
+          Lirum larum löffelstiel wer viel isst der ________ auch viel
+        </h1>
         <p>
           In alten weisheiten die schriftlich festgehalten wurden, wurde dieser
-          simple satz niedergeschrieben. Dieser satz kann man mit vielen wörten
-          vervollständigen. Dabei ist jede mögliche art die einzig richtige!
+          simple Satz niedergeschrieben. Dieser Satz kann man mit vielen wörten
+          vervollständigt werden. Dabei ist jede mögliche art die einzig
+          richtige!
         </p>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore et
@@ -56,13 +73,18 @@
           eum laborum labore dolore veniam debitis eos, nam aliquid. Quis
           pariatur provident illum rem veniam, soluta minus.
         </p>
+
         <!--ul>li*3>lorem5-->
         <ul>
           <li>Lorem ipsum dolor sit amet.</li>
           <li>Nesciunt sequi voluptate dolorem ullam.</li>
-          <li>Rem accusamus dignissimos voluptatem iste.</li>
+          <li class="pig-pink big-space">
+            Rem accusamus dignissimos voluptatem iste.
+          </li>
           <li>Quos cumque veniam aliquid ut!</li>
-          <li>Ratione incidunt obcaecati ipsam aut.</li>
+          <li id="frog-green" class="itlaic">
+            Ratione incidunt obcaecati ipsam aut.
+          </li>
         </ul>
 
         <h2>Lorem ipsum dolor sit.</h2>

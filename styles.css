@@ -1,0 +1,61 @@
+
+/*
+    haha ich bin ein kommentar
+*/
+/*
+    CSS-Selektoren
+
+    Element-Selektoren => body, main, a, div usw...
+    Class-Selektor => .card, .header, .hihi
+    ID-Selektor => #card1, #theme, #submit
+    Attribute-Selektor => TODO
+*/
+/*
+    element specificity = 001
+    class   specificity = 010
+    id      specificity = 100
+
+    higher overwrites lower
+*/
+body{
+    background-color: yellowgreen;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-style: italic;
+    text-rendering: optimizeSpeed;
+}
+
+main{
+    margin-left: 15px;
+    margin-right: 20px;
+}
+
+
+.header{
+    background-color: chocolate;
+}
+
+li.pig-pink{
+    background-color: pink;
+}
+
+li.big-space{
+    margin: 5cm;
+
+}
+
+#frog-green{
+    background-color: olive;
+    font-size: 2em;
+    text-shadow: 2px 2px 2px #ff0800;
+}
+li.itlaic{
+    font-style: italic;
+}
+
+h1#main-title{
+    font-style: normal;
+    font-size: 3em;
+    text-transform: uppercase;
+}
