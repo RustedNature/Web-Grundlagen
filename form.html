@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <style>
+      form {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        max-width: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="/formsubmit" method="get">
+      <label for="username">Username</label>
+      <input id="username" type="text" name="username" />
+
+      <label for="password">Password</label>
+      <input type="password" name="password" id="password" />
+
+      <label for="birthdate">Birthdate</label>
+      <input type="date" name="birthdate" id="birthdate" />
+
+      <label for="email">Email</label>
+      <input pattern="" type="email" name="email" id="email" />
+
+      <label for="color">Favorite Color</label>
+      <input type="color" name="color" id="color" />
+
+      <label for="funny">Favorite Number</label>
+      <input type="number" name="funny" id="funny" />
+
+      <label for="range">How funny is this</label>
+      <input type="range" name="range" id="range" />
+
+      <input type="reset" value="RESET!" />
+      <input type="submit" value="SEND!" />
+    </form>
+  </body>
+</html>
