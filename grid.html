@@ -1,110 +1,220 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Grid-Layout</title>
+    <title>Grid</title>
     <style>
       body {
-        background-color: #6c6c6c;
-      }
-      .grid-container {
+        background-color: #585858;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
       .card {
-        width: 300px;
-        color: #fefefe;
-        background-color: rgb(96, 89, 106);
-        border-radius: 30px;
-        box-shadow: 5px 5px 5px rgb(56, 52, 61);
+        color: whitesmoke;
+        text-shadow: 3px 3px 3px black;
+        background-color: rgb(115, 108, 207);
+        border-radius: 50px;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.616);
+      }
+      .grid-container {
+        display: grid;
+        grid-template-columns: minmax(300px, 400px) minmax(300px, 400px);
+        gap: 20px;
       }
       .card > img {
-        width: 100%;
-        border-top-left-radius: 30px;
-        border-top-right-radius: 30px;
+        width: 90%;
+        border-radius: 50px;
+        margin: 5%;
+        border: solid 2px rgba(0, 0, 0, 0.466);
+        /* box-shadow: 2px 2px 2px rgb(42, 40, 77); */
       }
       .card-text {
         display: flex;
         flex-direction: column;
         align-items: center;
-        font-size: 1.3em;
+        font-size: 1.5em;
       }
       .card-text > h3 {
         font-size: 1.3em;
-        font-weight: 400;
         font-family: Impact, Arial, sans-serif;
-        text-shadow: 1px 1px 2px black;
+        text-transform: uppercase;
+        font-weight: 400;
+        margin: 0px;
       }
       .card-text > p.price {
-        font-size: 1.6em;
-        font-weight: 600;
-        font-family: "Segoe UI", Verdana, sans-serif;
-        margin: 10px 0;
-        color: rgb(5, 224, 224);
-        text-shadow: 1px 1px 2px rgb(119, 215, 215);
+        font-size: 1.5em;
+        font-family: "Segoe UI", Arial, sans-serif;
+        margin: 10px 0px;
+        color: rgb(255, 255, 255);
       }
-      .card-text > :last-child {
+      /* .card-text > p.description {
         text-align: center;
-        margin: 10px 0 30px 0;
+      } */
+      .grid-container > :first-child {
+        grid-column: span 2;
+      }
+      .grid-container > :nth-child(2) {
+        grid-row: span 2;
+      }
+      .card-text > p:last-child {
+        text-align: center;
+        margin: 5% 5% 5% 5%;
+
+        /*margin: top , right, bottom, left. like roundrobin*/
       }
     </style>
   </head>
   <body>
-    <div class="grid-container">
-      <div class="card">
-        <img
-          src="https://picsum.photos/seed/snickers/400/400"
-          alt="Card1 Image"
-        />
-        <div class="card-text">
-          <h3>HEADPHONE</h3>
-          <p class="price">29,99</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing</p>
+    <body>
+      <!--generated with emmet 
+        div.grid-container>div.card>img+div.card-text>h3+p+p-->
+      <div class="grid-container">
+        <div class="card">
+          <img src="https://picsum.photos/800/800" alt="Card1 Image" />
+          <div class="card-text">
+            <h3>Headphone</h3>
+            <p class="price">29,99€</p>
+            <p class="description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
+              dolores.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://picsum.photos/800/800" alt="Card1 Image" />
+          <div class="card-text">
+            <h3>Headphone</h3>
+            <p class="price">29,99€</p>
+            <p class="description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
+              dolores.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://picsum.photos/800/800" alt="Card1 Image" />
+          <div class="card-text">
+            <h3>Headphone</h3>
+            <p class="price">29,99€</p>
+            <p class="description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
+              dolores.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://picsum.photos/800/800" alt="Card1 Image" />
+          <div class="card-text">
+            <h3>Headphone</h3>
+            <p class="price">29,99€</p>
+            <p class="description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
+              dolores.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://picsum.photos/800/800" alt="Card1 Image" />
+          <div class="card-text">
+            <h3>Headphone</h3>
+            <p class="price">29,99€</p>
+            <p class="description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
+              dolores.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://picsum.photos/800/800" alt="Card1 Image" />
+          <div class="card-text">
+            <h3>Headphone</h3>
+            <p class="price">29,99€</p>
+            <p class="description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
+              dolores.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://picsum.photos/800/800" alt="Card1 Image" />
+          <div class="card-text">
+            <h3>Headphone</h3>
+            <p class="price">29,99€</p>
+            <p class="description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
+              dolores.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://picsum.photos/800/800" alt="Card1 Image" />
+          <div class="card-text">
+            <h3>Headphone</h3>
+            <p class="price">29,99€</p>
+            <p class="description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
+              dolores.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://picsum.photos/800/800" alt="Card1 Image" />
+          <div class="card-text">
+            <h3>Headphone</h3>
+            <p class="price">29,99€</p>
+            <p class="description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
+              dolores.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://picsum.photos/800/800" alt="Card1 Image" />
+          <div class="card-text">
+            <h3>Headphone</h3>
+            <p class="price">29,99€</p>
+            <p class="description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
+              dolores.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://picsum.photos/800/800" alt="Card1 Image" />
+          <div class="card-text">
+            <h3>Headphone</h3>
+            <p class="price">29,99€</p>
+            <p class="description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
+              dolores.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://picsum.photos/800/800" alt="Card1 Image" />
+          <div class="card-text">
+            <h3>Headphone</h3>
+            <p class="price">29,99€</p>
+            <p class="description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
+              dolores.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://picsum.photos/800/800" alt="Card1 Image" />
+          <div class="card-text">
+            <h3>Headphone</h3>
+            <p class="price">29,99€</p>
+            <p class="description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
+              dolores.
+            </p>
+          </div>
         </div>
       </div>
-      <div class="card">
-        <img
-          src="https://picsum.photos/seed/snickers/400/400"
-          alt="Card1 Image"
-        />
-        <div class="card-text">
-          <h3>HEADPHONE</h3>
-          <p class="price">29,99</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing</p>
-        </div>
-      </div>
-      <div class="card">
-        <img
-          src="https://picsum.photos/seed/snickers/400/400"
-          alt="Card1 Image"
-        />
-        <div class="card-text">
-          <h3>HEADPHONE</h3>
-          <p class="price">29,99</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing</p>
-        </div>
-      </div>
-      <div class="card">
-        <img
-          src="https://picsum.photos/seed/snickers/400/400"
-          alt="Card1 Image"
-        />
-        <div class="card-text">
-          <h3>HEADPHONE</h3>
-          <p class="price">29,99</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing</p>
-        </div>
-      </div>
-      <div class="card">
-        <img
-          src="https://picsum.photos/seed/snickers/400/400"
-          alt="Card1 Image"
-        />
-        <div class="card-text">
-          <h3>HEADPHONE</h3>
-          <p class="price">29,99</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing</p>
-        </div>
-      </div>
-    </div>
+    </body>
   </body>
 </html>
