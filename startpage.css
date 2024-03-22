@@ -1,0 +1,47 @@
+:root {
+  --primary-color: rgb(147, 216, 35);
+  --accent-color: rgb(255, 50, 50);
+}
+body {
+  margin: 0;
+  padding: 0;
+  text-shadow: 2px 2px 2px black;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+}
+#clock {
+  margin-top: 10vh;
+  margin-bottom: 15px;
+  font-size: 3rem;
+  color: var(--primary-color);
+}
+#clock,
+#joke {
+  text-align: center;
+}
+main > .link-container {
+  border: double 5px var(--accent-color);
+  border-radius: 10px;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 1.3em;
+  min-width: auto;
+}
+
+.link-container > ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.link-container > h3 {
+  margin-top: 10px;
+  color: var(--primary-color);
+  font-size: 1.3em;
+}
+.link-container > ul > li > a {
+  color: azure;
+  text-decoration: none;
+}
