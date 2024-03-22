@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <style>
+      :root {
+        --text-shadow: 2px 2px 2px black;
+      }
+      body {
+        background: linear-gradient(
+          180deg,
+          rgba(55, 7, 59, 1) 0%,
+          rgba(14, 173, 177, 1) 100%
+        );
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        padding: 0;
+      }
+      form {
+        display: grid;
+        width: 700px;
+        grid-template-columns: 1fr 1fr;
+        font-size: 1.2rem;
+        gap: 25px;
+        color: white;
+        text-shadow: var(--text-shadow);
+        box-shadow: 2px 2px 50px black;
+        border: solid 3px rgba(0, 0, 0, 0.24);
+        border-radius: 25px;
+        padding: 10px;
+      }
+      form > h2 {
+        grid-column: span 2;
+        border-bottom: solid 2px gray;
+        padding-bottom: 5px;
+        margin-bottom: 0;
+      }
+      form > p {
+        grid-column: span 2;
+        margin: 0 10px;
+        font-style: italic;
+      }
+      form > input[type="submit"] {
+        grid-column: span 2;
+        border-radius: 10px;
+        padding: 15px;
+        font-size: 1.2em;
+        margin-bottom: 10px;
+        color: white;
+        border: solid 0;
+
+        text-shadow: var(--text-shadow);
+        background: linear-gradient(rgb(171, 7, 108) 0%, rgb(95, 4, 90) 100%);
+      }
+      form > .formgroup {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+      form > .formgroup > label {
+        font-size: 1.3em;
+      }
+      form > .formgroup > input {
+        font-size: 1em;
+        border-radius: 5px;
+        padding: 10px;
+      }
+      form > .radiogroup {
+        grid-column: span 2;
+      }
+      .radiogroup > #gender-title {
+        font-size: 1.3em;
+        margin-bottom: 10px;
+      }
+      .radiogroup > label {
+        margin-right: 25px;
+        font-size: 1.1em;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="/formresult" method="get">
+      <h2>Registration</h2>
+      <div class="formgroup">
+        <label for="fullname">Full Name</label>
+        <input type="text" name="fullname" id="fullname" placeholder="Hax Or" />
+      </div>
+      <div class="formgroup">
+        <label for="username">Username</label>
+        <input
+          type="text"
+          name="username"
+          id="username"
+          placeholder="Giggling Sprout"
+        />
+      </div>
+      <div class="formgroup">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="xor@1337.42.zip"
+        />
+      </div>
+      <div class="formgroup">
+        <label for="phone">Phone Number</label>
+        <input type="tel" name="phone" id="phone" placeholder="01008054646" />
+      </div>
+      <div class="formgroup">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="************"
+        />
+      </div>
+      <div class="formgroup">
+        <label for="confirmpass">Confirm Password</label>
+        <input
+          type="password"
+          name="confirmpass"
+          id="confirmpass"
+          placeholder="************"
+        />
+      </div>
+      <div class="radiogroup">
+        <div id="gender-title">Gender</div>
+        <input type="radio" name="gender" id="male" value="male" />
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="female" value="female" />
+        <label for="female">Female</label>
+        <input type="radio" name="gender" id="other" value="other" />
+        <label for="other">Other</label>
+      </div>
+      <p>
+        By clicking Sign Up, you agree to our Terms, Privacy Policy and Cookies
+        Policy. You may receive SMS notifications from us and can opt out at any
+        time.
+      </p>
+      <input type="submit" value="Sign Up" />
+    </form>
+  </body>
+</html>
