@@ -1,34 +1,54 @@
 :root {
-  --primary-color: rgb(147, 216, 35);
-  --accent-color: rgb(255, 50, 50);
+  --primary-color: rgb(255, 13, 178);
+  --accent-color: rgb(163, 22, 234);
 }
+
 body {
   margin: 0;
   padding: 0;
-  text-shadow: 2px 2px 2px black;
+  padding-top: 10vh;
+  background-image: url("./assets/background.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 90vh;
+  overflow-y: hidden;
 }
 
 main {
   display: flex;
   justify-content: space-around;
 }
+
 #clock {
-  margin-top: 10vh;
   margin-bottom: 15px;
-  font-size: 3rem;
+  font-weight: 700;
+  font-size: 4em;
   color: var(--primary-color);
+  text-shadow: 2px 2px 3px black;
+  font-family: HackerFont, Impact, sans-serif;
 }
+
 #clock,
 #joke {
   text-align: center;
 }
+
 main > .link-container {
-  border: double 5px var(--accent-color);
+  border: 5px double var(--accent-color);
   border-radius: 10px;
   padding: 15px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.8);
   font-size: 1.3em;
-  min-width: auto;
+  min-width: 190px;
+  width: 300px;
+}
+
+.link-container > h3 {
+  margin-top: 10px;
+  color: var(--primary-color);
+  text-shadow: 2px 2px 3px black;
+  font-size: 1.5em;
 }
 
 .link-container > ul {
@@ -36,12 +56,54 @@ main > .link-container {
   padding-left: 0;
 }
 
-.link-container > h3 {
-  margin-top: 10px;
-  color: var(--primary-color);
-  font-size: 1.3em;
-}
 .link-container > ul > li > a {
-  color: azure;
+  font-family: Roboto;
+  font-weight: 500;
+  font-style: italic;
+  color: #8c8c8c;
   text-decoration: none;
+  transition: all 0.5s ease-in-out;
+  /* margin: 0 15px 0 0; */
+}
+
+.link-container > ul > li > a:hover {
+  color: var(--primary-color);
+  /* font-size: 1.1em;
+  margin: 0; */
+}
+
+.joke-container {
+  display: flex;
+  justify-content: center;
+}
+
+p#joke {
+  background-color: rgba(0, 0, 0, 0.7);
+  font-size: 1.5em;
+  color: white;
+  display: inline-block;
+  text-align: center;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 4px 4px 5px rgba(137, 12, 66, 0.678);
+  font-family: Roboto, sans-serif;
+  font-style: italic;
+}
+
+p#joke::before {
+  content: "> ";
+}
+
+@media only screen and (max-width: 940px) {
+  body {
+    overflow-y: scroll;
+    height: fit-content;
+    background-image: url("./assets/background-mobile.jpg");
+    padding-top: 2rem;
+  }
+  main {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
 }
